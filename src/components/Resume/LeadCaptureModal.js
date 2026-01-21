@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { X, Phone, Download, Loader2, ShieldCheck, Mail } from "lucide-react";
+import { X, Phone, Download, Loader2, ShieldCheck } from "lucide-react";
 import { saveLead } from "@/services/leadCapture";
 
-export default function LeadCaptureModal({ isOpen, onClose, onDownload, isLight }) {
+export default function LeadCaptureModal({ isOpen, onClose, onDownload }) {
   const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");

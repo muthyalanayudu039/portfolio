@@ -7,8 +7,9 @@ import AddTestimonialModal from './AddTestimonialModal'
 import { getAllTestimonials } from '@/services/testimonials'
 import Button from '../UI/Button'
 
+const noop = () => { }
+
 const TestimonialSection = ({ testimonials: initialTestimonials }) => {
-    const [activeCard, setActiveCard] = useState(0)
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [testimonials, setTestimonials] = useState(initialTestimonials || [])
 
@@ -52,9 +53,7 @@ const TestimonialSection = ({ testimonials: initialTestimonials }) => {
                             <div key={`${testimonial.id}-${idx}`} className="w-[300px] sm:w-[350px] shrink-0">
                                 <TestimonialCard
                                     testimonial={testimonial}
-                                    handleActiveCard={() => {
-                                        setActiveCard(idx % testimonials.length)
-                                    }}
+                                    handleActiveCard={noop}
                                 />
                             </div>
                         ))}

@@ -29,7 +29,6 @@ const ScrollControls = () => {
 
     const scrollToNextSection = () => {
         const currentScroll = window.scrollY
-        const viewportHeight = window.innerHeight
 
         // Find the next section that is below the current viewport center
         for (const id of sections) {

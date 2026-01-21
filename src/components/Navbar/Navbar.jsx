@@ -29,7 +29,6 @@ export default function Navbar() {
     useEffect(() => {
         // Set initial active state based on current path and hash
         if (typeof window !== 'undefined') {
-            const currentHash = window.location.hash || '/'
             // Simple logic: if hash exists, try to match it. Else use pathname.
 
             const match = navItems.find((item) => item.href === pathname + window.location.hash) ||

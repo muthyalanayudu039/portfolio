@@ -16,7 +16,7 @@ const TestimonialCard = ({ testimonial: { name, title, feedback, image, stars },
         return () => {
             observer?.disconnect()
         }
-    }, [cardRef.current])
+    }, [handleActiveCard])
 
     return (
         <div

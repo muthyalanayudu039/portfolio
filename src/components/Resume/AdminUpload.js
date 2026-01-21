@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Upload, Check, Loader2, AlertCircle, FilePlus, CloudUpload } from "lucide-react";
+import { Upload, Loader2, FilePlus, CloudUpload } from "lucide-react";
 import { storage } from "@/lib/firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 
-export default function AdminUpload({ onUploadSuccess, isLight }) {
+export default function AdminUpload({ onUploadSuccess }) {
     const [file, setFile] = useState(null);
     const [uploading, setUploading] = useState(false);
     const [progress, setProgress] = useState(0);
@@ -42,7 +42,7 @@ export default function AdminUpload({ onUploadSuccess, isLight }) {
                 const p = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
                 setProgress(p);
             },
-            (err) => {
+            () => {
                 setError("Upload failed.");
                 setUploading(false);
             },

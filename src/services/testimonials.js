@@ -1,5 +1,5 @@
 import { db } from '@/lib/firebase'
-import { ref, push, get, child, serverTimestamp } from 'firebase/database'
+import { ref, push, get, child } from 'firebase/database'
 
 export const getAllTestimonials = async () => {
     try {

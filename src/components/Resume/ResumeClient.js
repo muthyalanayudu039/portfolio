@@ -5,10 +5,8 @@ import {
     Download,
     FileText,
     ArrowRight,
-    Lock,
     ShieldCheck,
     Share2,
-    FileDown,
     Settings
 } from "lucide-react";
 import LeadCaptureModal from "./LeadCaptureModal";
