@@ -49,15 +49,15 @@ const AddTestimonialModal = ({ isOpen, onClose, onRefresh }) => {
             />
 
             {/* Modal Content */}
-            <div className="bg-secondary border-border relative w-full max-w-md rounded-2xl border p-6 shadow-2xl animate-in fade-in zoom-in duration-300">
+            <div className="bg-secondary border-border relative w-full max-w-md rounded-2xl border p-5 sm:p-6 shadow-2xl animate-in fade-in zoom-in duration-300 max-h-[85vh] overflow-y-auto">
                 <button
                     onClick={onClose}
-                    className="text-neutral/60 hover:text-neutral absolute top-4 right-4 transition-colors"
+                    className="text-neutral/60 hover:text-neutral absolute top-4 right-4 transition-colors hover:scale-110 active:scale-90 z-10"
                 >
                     <X size={24} />
                 </button>
 
-                <h2 className="text-neutral mb-2 text-2xl font-bold">Add Your Review</h2>
+                <h2 className="text-neutral mb-2 text-xl sm:text-2xl font-bold mt-2">Add Your Review</h2>
                 <p className="text-neutral/60 mb-6 text-sm">Share your experience with our services.</p>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -80,13 +80,13 @@ const AddTestimonialModal = ({ isOpen, onClose, onRefresh }) => {
 
                     <div className="mb-4">
                         <label className="text-neutral mb-2 block text-base font-medium">Rating</label>
-                        <div className="flex gap-1">
+                        <div className="flex gap-2">
                             {[1, 2, 3, 4, 5].map((star) => (
                                 <button
                                     key={star}
                                     type="button"
                                     onClick={() => handleStarClick(star)}
-                                    className="focus:outline-none"
+                                    className="focus:outline-none transition-transform hover:scale-110 active:scale-95 p-1"
                                 >
                                     <Star
                                         size={28}

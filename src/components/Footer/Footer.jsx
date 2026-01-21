@@ -19,7 +19,7 @@ const Footer = () => {
                             <span className="text-2xl font-bold tracking-tight text-neutral">Muthyala Nayudu</span>
                         </div>
                         <p className="text-secondary-content max-w-sm leading-relaxed">
-                            Front End Developer & Web Site Builder dedicated to building high-performance web applications and stunning stores. Crafting seamless digital experiences with precision and passion.
+                            Crafting seamless digital experiences with precision and passion.
                         </p>
                         <div className="flex gap-4 mt-2">
                             {socials.map((item, index) => (
@@ -68,13 +68,13 @@ const Footer = () => {
                         <h5 className="text-lg font-semibold text-neutral">Get In Touch</h5>
                         <div className="space-y-4">
                             <a
-                                href="mailto:nayudumuthyala919@gmail.com"
+                                href="mailto:muthyalanayudu39@gmail.com"
                                 className="group flex items-center gap-3 text-secondary-content hover:text-accent transition-colors"
                             >
                                 <div className="bg-secondary flex h-9 w-9 items-center justify-center rounded-lg border border-border transition-colors group-hover:border-accent/50">
                                     <Mail size={16} />
                                 </div>
-                                <span className="text-sm">nayudumuthyala919@gmail.com</span>
+                                <span className="text-sm">muthyalanayudu39@gmail.com</span>
                             </a>
                             <a
                                 href="tel:+919515090119"
@@ -89,7 +89,7 @@ const Footer = () => {
                                 <div className="bg-secondary flex h-9 w-9 items-center justify-center rounded-lg border border-border">
                                     <MapPin size={16} />
                                 </div>
-                                <span className="text-sm">Andhra Pradesh, India</span>
+                                <span className="text-sm">Hyderabad, Telangana, India</span>
                             </div>
                         </div>
                     </div>
@@ -98,7 +98,7 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="mt-16 border-t border-border pt-8 text-center">
                     <p className="text-secondary-content text-sm">
-                        © {new Date().getFullYear()} Muthyala Nayudu. Built with <span className="text-neutral font-medium">Next.js</span> & <span className="text-neutral font-medium">Tailwind CSS</span>.
+                        © {new Date().getFullYear()} Muthyala Nayudu Maddu. Thank you for visiting my portfolio.
                     </p>
                 </div>
             </div>

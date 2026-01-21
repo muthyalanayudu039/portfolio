@@ -21,7 +21,7 @@ const TestimonialCard = ({ testimonial: { name, title, feedback, image, stars },
     return (
         <div
             ref={cardRef}
-            className="bg-secondary border-border flex max-w-full shrink-0 flex-col items-center justify-between gap-4 rounded-2xl border p-4 text-center sm:max-w-[425px]">
+            className="bg-secondary border-border flex max-w-full shrink-0 flex-col items-center justify-between gap-4 rounded-2xl border p-4 text-center sm:max-w-[425px] h-full">
             <p className="text-neutral text-center leading-8 before:content-['“'] after:content-['”']">
                 {feedback}
             </p>

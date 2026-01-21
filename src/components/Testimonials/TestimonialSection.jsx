@@ -41,28 +41,38 @@ const TestimonialSection = ({ testimonials: initialTestimonials }) => {
             </div>
 
             {testimonials.length > 0 ? (
-                <>
-                    <div className="hide-scrollbar my-8 flex gap-8 overflow-x-auto pb-4">
-                        {testimonials.map((testimonial, idx) => (
-                            <TestimonialCard
-                                key={testimonial.id || idx}
-                                testimonial={testimonial}
-                                handleActiveCard={() => {
-                                    setActiveCard(idx)
-                                }}
-                            />
+                <div className="relative mt-10 overflow-hidden">
+                    {/* Gradient Masks */}
+                    <div className="absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-primary to-transparent pointer-events-none" />
+                    <div className="absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-primary to-transparent pointer-events-none" />
+
+                    <div className="flex gap-6 animate-scroll w-max">
+                        {/* Duplicate Logic for seamless loop */}
+                        {[...testimonials, ...testimonials].map((testimonial, idx) => (
+                            <div key={`${testimonial.id}-${idx}`} className="w-[300px] sm:w-[350px] shrink-0">
+                                <TestimonialCard
+                                    testimonial={testimonial}
+                                    handleActiveCard={() => {
+                                        setActiveCard(idx % testimonials.length)
+                                    }}
+                                />
+                            </div>
                         ))}
                     </div>
 
-                    <div className="flex items-center justify-center gap-1 sm:hidden">
-                        {testimonials.map((_, idx) => (
-                            <div
-                                key={idx}
-                                className={`${idx === activeCard ? 'bg-accent size-[12px]' : 'size-[10px] bg-white/50'} rounded-full`}
-                            />
-                        ))}
-                    </div>
-                </>
+                    <style jsx global>{`
+                        @keyframes scroll {
+                            0% { transform: translateX(0); }
+                            100% { transform: translateX(-50%); }
+                        }
+                        .animate-scroll {
+                            animation: scroll 40s linear infinite;
+                        }
+                        .animate-scroll:hover {
+                            animation-play-state: paused;
+                        }
+                    `}</style>
+                </div>
             ) : (
                 <div className="bg-secondary/30 border-border my-8 flex flex-col items-center justify-center rounded-2xl border border-dashed p-12 text-center">
                     <p className="text-neutral/60 mb-4 text-lg">No reviews yet. Be the first to share your experience!</p>

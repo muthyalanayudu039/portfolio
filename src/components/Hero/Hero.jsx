@@ -19,7 +19,7 @@ const Hero = () => {
                     </h1>
 
                     <h2 className="text-neutral mt-3">
-                        Crafting innovative solutions to solve real-world problems
+                        Frontend Engineer with 2+ years of experience in frontend development and modern Website Builder Tools, specializing in responsive UI web applications, robust error handling, Skilled in delivering clean, user friendly interfaces with a strong focus on performance and usability.
                     </h2>
 
                     <div className="mt-6 flex flex-wrap gap-6">
@@ -30,7 +30,9 @@ const Hero = () => {
                             Hire Me
                         </a>
                         <a
-                            href="#"
+                            href="https://www.linkedin.com/in/muthyalanayudu39"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             aria-label="View LinkedIn Profile"
                             className="text-neutral bg-secondary text-center sm:text-left w-full sm:max-w-max cursor-pointer rounded-lg px-[14px] py-[10px] text-sm">
                             LinkedIn Profile

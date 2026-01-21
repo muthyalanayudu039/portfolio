@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import { X, Phone, Download, Loader2, ShieldCheck, Mail } from "lucide-react";
-import { db } from "@/lib/firebase";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { saveLead } from "@/services/leadCapture";
 
 export default function LeadCaptureModal({ isOpen, onClose, onDownload, isLight }) {
   const [phone, setPhone] = useState("");
@@ -23,14 +22,14 @@ export default function LeadCaptureModal({ isOpen, onClose, onDownload, isLight 
 
     setLoading(true);
     try {
-      await addDoc(collection(db, "leads"), {
-        mobile: phone,
-        timestamp: serverTimestamp(),
-        type: "resume_download",
-      });
+      const result = await saveLead(phone);
 
-      onDownload();
-      onClose();
+      if (result.success) {
+        onDownload();
+        onClose();
+      } else {
+        throw new Error(result.error);
+      }
     } catch (err) {
       console.error("Error saving lead:", err);
       setError("Failed to save. Please try again.");
