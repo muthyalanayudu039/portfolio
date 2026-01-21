@@ -26,7 +26,7 @@ const ThemeMenu = () => {
     }
 
     return (
-        <div ref={menuRef} className="fixed right-6 top-1/2 z-50 -translate-y-1/2 md:right-11">
+        <div ref={menuRef} className="fixed right-6 top-1/2 z-[999] -translate-y-1/2 md:right-11">
             <div
                 onClick={() => setShowThemeMenu(!showThemeMenu)}
                 className="bg-neutral cursor-pointer rounded-full p-1.5 md:p-2">
@@ -41,7 +41,7 @@ const ThemeMenu = () => {
             {showThemeMenu && (
                 <div className="bg-secondary animate-fade-in border-border absolute right-0 bottom-full mb-5 space-y-3 rounded-xl border p-3 md:space-y-4 md:p-5">
                     <div className="text-primary-content border-border flex items-center justify-between border-b pb-3 md:pb-4">
-                        <span className="text-sm font-semibold md:text-base"> Select Theme</span>
+                        {/* <span className="text-sm font-semibold md:text-base"> Select Theme</span> */}
                         <CloseIcon
                             onClick={() => setShowThemeMenu(false)}
                             className="h-3 w-3 cursor-pointer md:h-4 md:w-4"
