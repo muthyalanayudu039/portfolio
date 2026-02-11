@@ -18,9 +18,15 @@ const Hero = () => {
                         <span className="text-accent block text-[1.75rem] font-bold">{role}</span>
                     </h1>
 
-                    <h2 className="text-neutral mt-3">
-                        Frontend Engineer with 2+ years of experience in frontend development and modern Website Builder Tools, specializing in responsive UI web applications, robust error handling, Skilled in delivering clean, user friendly interfaces with a strong focus on performance and usability.
-                    </h2>
+                    <p className="text-neutral mt-3">
+                        I currently work as a Frontend Engineer with over 1 year of professional experience in this role. Overall, I have 2.3 years of IT experience and am based in Hyderabad.
+                    </p>
+                    <p className="text-neutral mt-3">
+                        I specialize in building responsive, user friendly web applications using JavaScript, React.js, TypeScript, and modern CSS frameworks like Tailwind. I have strong experience in REST API integration, state management using Redux, performance optimization, and clean UI design.
+                    </p>
+                    <p className="text-neutral mt-3">
+                        Before that, I worked as a Web Designer, where I built and customized websites using WordPress, Shopify, SitePad, Elementor, and Duda. I focused on modern themes, responsive design, SEO, and clean user experience.
+                    </p>
 
                     <div className="mt-6 flex flex-wrap gap-6">
                         <a

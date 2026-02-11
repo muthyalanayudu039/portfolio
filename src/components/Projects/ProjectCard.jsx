@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Earning, GithubIcon, Likes, PreviewIcon, Star, Timer } from '../../utils/icons'
+import { Earning, GithubIcon, Likes, Star, Timer } from '../../utils/icons'
 
 const IconText = ({ icon, text }) => (
     <li className="flex gap-2">
@@ -63,16 +63,7 @@ const ProjectCard = ({ data }) => {
                 <div className="bg-primary text-primary-content my-4 h-[100px] overflow-scroll rounded-2xl px-4 py-2">
                     <p className="text-[14px] font-normal md:text-base">{shortDescription}</p>
                 </div>
-                <div className="flex gap-5">
-                    {livePreview && (
-                        <a
-                            href={livePreview}
-                            className="text-accent flex gap-2 text-sm underline underline-offset-[3px] transition-all duration-75 ease-linear hover:scale-105 md:text-base"
-                            target="_blank">
-                            <PreviewIcon className="h-auto w-[18px] md:w-5" />
-                            <span>Live Preview</span>
-                        </a>
-                    )}
+                {/* <div className="flex gap-5">
                     {githubLink && (
                         <a
                             href={githubLink}
@@ -82,7 +73,7 @@ const ProjectCard = ({ data }) => {
                             <span>Github Link</span>
                         </a>
                     )}
-                </div>
+                </div> */}
             </div>
         </div>
     )

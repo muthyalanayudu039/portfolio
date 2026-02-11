@@ -1,6 +1,6 @@
 import Hero from '@/components/Hero/Hero'
 import ProjectSection from '@/components/Projects/ProjectSection'
-import ServiceSection from '@/components/Services/ServiceSection'
+// import ServiceSection from '@/components/Services/ServiceSection'
 import Skills from '@/components/Skills/Skills'
 import TestimonialSection from '@/components/Testimonials/TestimonialSection'
 import ScrollControls from '@/components/UI/ScrollControls'
@@ -17,7 +17,7 @@ export default async function Home() {
             <Skills />
             <div className="mx-auto my-8 max-w-[1200px] px-4 md:my-[3.75rem]">
                 <ProjectSection projects={projects} />
-                <ServiceSection />
+                {/* <ServiceSection /> */}
                 <TestimonialSection testimonials={testimonials} />
             </div>
             <ScrollControls />

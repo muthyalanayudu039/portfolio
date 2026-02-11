@@ -1,33 +1,12 @@
-import { promises as fs } from 'fs'
-import path from 'path'
-
-// Function to read project file
-const readProjectFile = async (filePath) => {
-    const projectData = await fs.readFile(filePath, 'utf8')
-    return JSON.parse(projectData)
-}
+import { projects } from '@/appData'
 
 // Function to get all projects
 export const getAllProjects = async () => {
     try {
-        const projectsPath = path.join(process.cwd(), '/content/projects')
-        const projectsName = await fs.readdir(projectsPath)
-
-        const projects = await Promise.all(
-            projectsName.map(async (projectName) => {
-                const filePath = path.join(projectsPath, projectName)
-                const projectDetails = await readProjectFile(filePath)
-                return projectDetails
-            }),
-        )
-
         // Sort projects by priority
-        projects.sort((a, b) => a.priority - b.priority)
-
-        return projects
+        return [...projects].sort((a, b) => a.priority - b.priority)
     } catch (error) {
-        // Handle errors
-        console.error('Error:', error)
+        console.error('Error fetching projects:', error)
         return []
     }
 }

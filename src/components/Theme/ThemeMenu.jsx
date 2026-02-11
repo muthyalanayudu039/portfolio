@@ -6,7 +6,7 @@ import { CheckIcon, CloseIcon } from '@/utils/icons'
 import { useEffect, useState } from 'react'
 
 const ThemeMenu = () => {
-    const [theme, setTheme] = useState('dark')
+    const [theme, setTheme] = useState('light')
     const [showThemeMenu, setShowThemeMenu] = useState(false)
     const menuRef = useOutsideClick(() => setShowThemeMenu(false))
 
